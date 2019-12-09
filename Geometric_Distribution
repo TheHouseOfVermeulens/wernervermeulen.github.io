@@ -1,0 +1,14 @@
+''' The geometric distribution is a negative binomial distribution where the number of successes is 1
+
+. We express this with the following formula: g(n,p) = q^(n-1).p
+
+'''
+#Code: 
+
+def geometric(p, n, x):
+    return p**x * (1-p)**(n-x) 
+
+numerator, denominator = list(map(float, input().strip().split(" ")))
+n = float(input())
+p = numerator / denominator
+print(round(geometric(p, n, 1), 3))
